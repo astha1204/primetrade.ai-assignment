@@ -14,10 +14,7 @@ Designed for the **Backend Developer Intern** assignment at Prime Trade, focusin
 - **API Versioning:** Routes are structured under `/api/v1/` for future scalability.
 - **Data Validation:** Strict input validation using `express-validator`.
 - **Documentation:** Integrated **Swagger UI** for interactive API testing.
-- **Security:**
-  - Protected Routes (Middleware).
-  - CORS configuration.
-  - Sanitized inputs.
+- **Security:** Protected Routes (Middleware), CORS configuration, and sanitized inputs.
 
 ### ✅ Frontend Integration (Bonus)
 - Built with **React.js (Vite)** + **Tailwind CSS**.
@@ -43,54 +40,63 @@ Designed for the **Backend Developer Intern** assignment at Prime Trade, focusin
 ```bash
 git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
-2. Backend Setup
+```
+
+### 2. Backend Setup
+
 Navigate to the backend directory:
-```
-Bash
-```
+```bash
 cd backend
 npm install
 ```
-Environment Variables:
-Create a .env file in the backend folder and add:
 
-env
-```
+**Environment Variables:** Create a `.env` file in the `backend` folder and add:
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secure_random_string
 ```
-Run the Server:
 
-Bash
-
+**Run the Server:**
+```bash
 npm start
-Server runs on http://localhost:5000
+```
+Server runs on `http://localhost:5000`
 
-3. Frontend Setup (Optional for testing)
+### 3. Frontend Setup (Optional)
+
 Open a new terminal:
-
-Bash
-
+```bash
 cd frontend
 npm install
 npm run dev
-📚 API Documentation
+```
+
+---
+
+## 📚 API Documentation
+
 Once the server is running, visit the interactive Swagger documentation:
+👉 **http://localhost:5000/api-docs**
 
-👉 http://localhost:5000/api-docs
+### Core Endpoints
 
-Core Endpoints
-Method	Endpoint	Access	Description
-```
-POST	/api/v1/auth/register	Public	Register new user
-POST	/api/v1/auth/login	Public	Login & receive Token
-GET	/api/v1/auth/me	Private	Get Profile
-GET	/api/v1/tasks	Private	Get User's Tasks
-POST	/api/v1/tasks	Private	Create Task
-PUT	/api/v1/tasks/:id	Private	Update Task
-DELETE	/api/v1/tasks/:id	Private	Delete Task
-```
-🛡️ Scalability Strategy
-A detailed breakdown of how this architecture scales (Microservices, Caching, Load Balancing) is available in the SCALABILITY.md file in the root directory.
+| Method | Endpoint | Access | Description |
+|--------|----------|--------|-------------|
+| `POST` | `/api/v1/auth/register` | Public | Register new user |
+| `POST` | `/api/v1/auth/login` | Public | Login & receive Token |
+| `GET` | `/api/v1/auth/me` | Private | Get Profile |
+| `GET` | `/api/v1/tasks` | Private | Get User's Tasks |
+| `POST` | `/api/v1/tasks` | Private | Create Task |
+| `PUT` | `/api/v1/tasks/:id` | Private | Update Task |
+| `DELETE` | `/api/v1/tasks/:id` | Private | Delete Task |
 
+---
+
+## 🛡️ Scalability Strategy
+
+A detailed breakdown of how this architecture scales (Microservices, Caching, Load Balancing) is available in the `SCALABILITY.md` file in the root directory.
+
+---
+
+**Author:** Aastha Arora
